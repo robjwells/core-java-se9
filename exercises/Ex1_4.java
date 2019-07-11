@@ -6,15 +6,7 @@ class Ex1_4 {
 
         System.out.println("Using Double.nextUp():");
         System.out.println(Math.nextUp(0.0));
-        // /* This is too slow */
-        // double d = Math.pow(2, 1023);
-        // while (true) {
-        //     double next = Math.nextUp(d);
-        //     if (next == Double.POSITIVE_INFINITY) {
-        //         System.out.println(d);
-        //         break;
-        //     }
-        //     d = next;
-        // }
+        System.out.println(Math.nextDown(Double.POSITIVE_INFINITY));
+       
     }
 }
