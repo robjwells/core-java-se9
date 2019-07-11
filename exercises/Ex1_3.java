@@ -10,5 +10,8 @@ class Ex1_3 {
         System.out.println(
             x_or_y > z ? x_or_y : z
         );
+        System.out.println(
+            Math.max(Math.max(x, y), z)
+        );
     }
 }
