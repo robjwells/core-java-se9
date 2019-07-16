@@ -6,5 +6,6 @@ class Ex1_2 {
         int angle = in.nextInt();
         System.out.printf("%%:        %d\n", angle % 360);
         System.out.printf("floorMod: %d\n", Math.floorMod(angle, 360));
+        in.close();
     }
 }

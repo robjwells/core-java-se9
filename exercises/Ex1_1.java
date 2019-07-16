@@ -10,5 +10,6 @@ class Ex1_1 {
         if (n != 0) {
             System.out.printf("1/n = %a\n", 1.0/n);
         }
+        in.close();
     }
 }

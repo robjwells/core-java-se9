@@ -13,5 +13,6 @@ class Ex1_3 {
         System.out.println(
             Math.max(Math.max(x, y), z)
         );
+        in.close();
     }
 }
