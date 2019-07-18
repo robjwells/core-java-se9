@@ -7,22 +7,23 @@ class Ex1_12 {
     }
 
     /**
-     * Copied from Java ArrayList code.
+     * Copied from Java ArrayList code. (java.base/java/util/ArrayList.java)
      */
     public boolean remove(Object o) {
         final Object[] es = elementData;
         final int size = this.size;
         int i = 0;
-        found: {
-            if (o == null) {
-                for (; i < size; i++)
-                    if (es[i] == null)
-                        break found;
-            } else {
-                for (; i < size; i++)
-                    if (o.equals(es[i]))
-                        break found;
-            }
+        boolean found = false;
+        if (o == null) {
+            for (; i < size; i++)
+                if (es[i] == null)
+                    found = true;
+        } else {
+            for (; i < size; i++)
+                if (o.equals(es[i]))
+                    found = true;
+        }
+        if (!found) {
             return false;
         }
         fastRemove(es, i);
