@@ -6,14 +6,14 @@ package ch02.ex06;
  * @author Rob Wells
  * @version 1.0
  */
-class MutablePoint {
+public class MutablePoint {
     private double x;
     private double y;
 
     /**
      * Constructs a <code>MutablePoint</code> at the origin (0, 0).
      */
-    MutablePoint() {
+    public MutablePoint() {
         this.x = 0.0;
         this.y = 0.0;
     }
@@ -23,7 +23,7 @@ class MutablePoint {
      * @param x The <em>x</em> (horizontal) coordinate in the plane
      * @param y The <em>y</em> (vertical) coordinate in the plane
      */
-    MutablePoint(double x, double y) {
+    public MutablePoint(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -53,7 +53,7 @@ class MutablePoint {
      * @param yDelta the distance to move the point along the <em>x</em> axis
      * @return <code>this</code> after its coordinates have been mutated in place
      */
-    MutablePoint translate(double xDelta, double yDelta) {
+    public MutablePoint translate(double xDelta, double yDelta) {
         x += xDelta;
         y += yDelta;
         return this;
@@ -67,7 +67,7 @@ class MutablePoint {
      * @param factor the amount by which to scale the <code>x</code> and <code>y</code> coordinates
      * @return <code>this</code> after its coordinates have been mutated in place
      */
-    MutablePoint scale(double factor) {
+    public MutablePoint scale(double factor) {
         x *= factor;
         y *= factor;
         return this;

@@ -6,14 +6,14 @@ package ch02.ex05;
  * @author Rob Wells
  * @version 1.0
  */
-class Point {
+public class Point {
     private final double x;
     private final double y;
 
     /**
      * Constructs a <code>Point</code> at the origin (0, 0).
      */
-    Point() {
+    public Point() {
         this.x = 0.0;
         this.y = 0.0;
     }
@@ -23,7 +23,7 @@ class Point {
      * @param x The <em>x</em> (horizontal) coordinate in the plane
      * @param y The <em>y</em> (vertical) coordinate in the plane
      */
-    Point(double x, double y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -52,18 +52,18 @@ class Point {
      * @param yDelta the distance to move the point along the <em>x</em> axis
      * @return a new <code>Point</code> at <code>(x + xDelta, y + yDelta)</code>
      */
-    Point translate(double xDelta, double yDelta) {
+    public Point translate(double xDelta, double yDelta) {
         return new Point(x + xDelta, y + yDelta);
     }
 
     /**
      * Constructs a new <code>Point</code> by scaling the <code>x</code> and <code>y</code> values
      * of this <code>Point</code> by <code>factor</code>, so that the new <code>Point</code> is at
-     * <code>(x * factor, y * factor)</code>>
+     * <code>(x * factor, y * factor)</code>
      * @param factor the amount by which to scale the <code>x</code> and <code>y</code> coordinates
      * @return a new <code>Point</code> at <code>(x * factor, y * factor)</code>
      */
-    Point scale(double factor) {
+    public Point scale(double factor) {
         return new Point(x * factor, y * factor);
     }
 }
