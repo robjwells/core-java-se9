@@ -1,4 +1,4 @@
-package ch03;
+package ch03.ex01;
 
 import java.util.Arrays;
 

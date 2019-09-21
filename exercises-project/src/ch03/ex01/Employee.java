@@ -1,4 +1,4 @@
-package ch03;
+package ch03.ex01;
 
 public class Employee implements Measurable {
     private String name;
