@@ -18,11 +18,11 @@ public class Employee implements Measurable {
      * -- it could be any Measurable, so we must cast.
      */
     public static String nameOfHighestPaidEmployee(Employee[] employees) {
-        Measurable largest = Measurable.largest(employees);
+        Employee largest = Measurable.largest(employees);
         if (largest == null) {
             return null;
         }
-        return ((Employee) largest).getName();
+        return largest.getName();
     }
 
     public String getName() {

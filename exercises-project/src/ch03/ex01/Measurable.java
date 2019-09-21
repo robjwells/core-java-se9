@@ -11,7 +11,7 @@ public interface Measurable {
         return Arrays.stream(objects).mapToDouble(Measurable::getMeasure).sum() / objects.length;
     }
 
-    static Measurable largest(Measurable[] objects) {
+    static <T extends Measurable> T largest(T[] objects) {
         if (objects.length == 0) {
             return null; // Ick, but Ex 3.2 doesn't provide for Optional
         }
