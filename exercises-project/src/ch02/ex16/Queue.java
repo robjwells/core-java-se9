@@ -96,6 +96,10 @@ public class Queue<T> implements Iterable<T> {
         }
     }
 
+    /*
+     * "Should the iterator be static or not?"
+     * I'd say not as it needs access to the head.
+     */
     private class QueueIterator implements Iterator<T> {
         private Node<T> current;
 
