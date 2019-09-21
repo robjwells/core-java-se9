@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public interface Measurable {
-    double getMeasure();
-
     static double average(Measurable[] objects) {
         if (objects.length == 0) {
             return 0;
@@ -19,4 +17,6 @@ public interface Measurable {
         }
         return Arrays.stream(objects).max(Comparator.comparingDouble(Measurable::getMeasure)).get();
     }
+
+    double getMeasure();
 }
