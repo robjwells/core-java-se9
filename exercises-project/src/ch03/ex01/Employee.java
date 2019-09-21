@@ -21,4 +21,18 @@ public class Employee implements Measurable {
     public double getMeasure() {
         return salary;
     }
+
+    /*
+     * Ex 3.2
+     *
+     * The exercise asks why we need a cast.
+     *
+     * It's because Measurable.largest only says that it returns a Measurable
+     * -- it could be any Measurable, so we must cast.
+     */
+    public static String nameOfHighestPaidEmployee(Employee[] employees) {
+        Measurable largest = Measurable.largest(employees);
+        if (largest == null) { return null; }
+        return ((Employee) largest).getName();
+    }
 }
