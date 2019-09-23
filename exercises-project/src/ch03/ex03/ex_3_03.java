@@ -1,4 +1,4 @@
-package ch03.ex02;
+package ch03.ex03;
 
 /*
  * What are the supertypes of String?
@@ -28,5 +28,5 @@ package ch03.ex02;
  * DataOutput (interface)
  * ImageInputStream (interface)
  */
-public class ex_3_02 {
+public class ex_3_03 {
 }
