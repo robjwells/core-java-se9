@@ -16,6 +16,10 @@ public class Employee implements Measurable {
      *
      * It's because Measurable.largest only says that it returns a Measurable
      * -- it could be any Measurable, so we must cast.
+     *
+     * In the below, there is actually no cast -- because I’ve enhanced
+     * Measurable.largest with generics, so that it returns an object of the
+     * type contained in the array provided as an argument.
      */
     public static String nameOfHighestPaidEmployee(Employee[] employees) {
         Employee largest = Measurable.largest(employees);
