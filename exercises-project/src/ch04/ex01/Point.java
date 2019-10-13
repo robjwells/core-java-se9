@@ -3,7 +3,7 @@ package ch04.ex01;
 import java.util.Objects;
 
 public class Point {
-    private final double x, y;
+    protected final double x, y;
 
     public Point(double x, double y) {
         this.x = x;

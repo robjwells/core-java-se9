@@ -19,7 +19,7 @@ public class LabeledPoint extends Point {
 
     @Override
     public String toString() {
-        return String.format("(%s: %s, %s)", label, getX(), getY());
+        return String.format("(%s: %s, %s)", label, x, y);
     }
 
     @Override
