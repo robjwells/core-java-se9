@@ -17,4 +17,9 @@ public class Line extends Shape {
                 (point.getY() + to.getY()) / 2
         );
     }
+
+    @Override
+    public Line clone() throws CloneNotSupportedException {
+        return (Line) super.clone();
+    }
 }

@@ -2,7 +2,7 @@ package ch04.ex04;
 
 import ch04.ex01.Point;
 
-public abstract class Shape {
+public abstract class Shape implements Cloneable {
     protected Point point;
 
     public Shape(Point point) {
@@ -19,5 +19,10 @@ public abstract class Shape {
                 point.getX() + dx,
                 point.getY() + dy
         );
+    }
+
+    @Override
+    public Shape clone() throws CloneNotSupportedException {
+        return (Shape) super.clone();
     }
 }

@@ -17,4 +17,9 @@ public class Rectangle extends Shape {
         // `point` is the top-left corner of the rectangle
         return new Point(point.getX() + width / 2, point.getY() - height / 2);
     }
+
+    @Override
+    public Rectangle clone() throws CloneNotSupportedException {
+        return (Rectangle) super.clone();
+    }
 }
