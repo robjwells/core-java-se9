@@ -22,4 +22,15 @@ public class ReadValues {
         }
         return results;
     }
+
+    /**
+     * Exercise 5.2: Sum the double values returned by <tt>readValues</tt>.
+     *
+     * @param filename the file to read
+     * @return the sum of the double values in the file
+     * @throws FileNotFoundException rethrown from <tt>readValues</tt>
+     */
+    public static double sumOfValues(String filename) throws FileNotFoundException {
+        return readValues(filename).stream().mapToDouble(d -> d).sum();
+    }
 }
