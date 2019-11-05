@@ -37,26 +37,33 @@ public class Catch {
                     while (in.hasNext()) {
                         out.println(in.next().toLowerCase());
                     }
-                } catch (Exception outer) {
+                } catch (Exception e) {
                     System.err.println("Error occurred with hasNext, next or println.");
+                    e.printStackTrace();
+                } finally {
                     try {
                         out.close();
-                        in.close();
-                    } catch (Exception inner) {
-                        System.err.println("Exception occurred trying to close in & out.");
-                        outer.addSuppressed(inner);
+                    } catch (Exception e) {
+                        System.err.println("Exception occurred trying to close out.");
+                        e.printStackTrace();
+                    } finally {
+                        try {
+                            in.close();
+                        } catch (Exception e) {
+                            System.err.println("Exception occurred trying to close in.");
+                            e.printStackTrace();
+                        }
                     }
-                    outer.printStackTrace();
                 }
             } catch (FileNotFoundException e) {
                 System.err.println("FileNotFound when trying to create the PrintWriter.");
+                e.printStackTrace();
+            } finally {
                 try {
                     in.close();
-                } catch (Exception ex) {
-                    System.err.println("Exception when trying to close the scanner.");
-                    e.addSuppressed(ex);
+                } catch (Exception e) {
+                    System.err.println("Exception when trying to close the Scanner.");
                 }
-                e.printStackTrace();
             }
         } catch (IOException e) {
             System.err.println("IOException when trying to create the Scanner.");
